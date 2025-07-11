@@ -1,6 +1,117 @@
-body{
-    margin:0px;
+/* Variables */
+
+:root{
+    --primary-color:#3298db;
+    --secondary-color:#2ecc71; 
+    --accent-color: #e74c3c;   
+    --dark-accent-color:#d0230f;
+    --text-color:#34495e; 
+    --bg-color:#ecf0f1; 
+    --white:#ffffff; 
+    --shadow: 0 2px 10px rgba(0,0,0,0.15);  
+    --gradient: linear-gradient(135deg,rgba(50, 152, 219, 0.5),rgba(46, 204, 113, 0.7))
+
+}
+
+/* Remove defaults */
+
+*{
+    margin: 0;
+    padding: 0;
 } 
-h1{
-    
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+/* Nav */ 
+
+header{
+    background-color: var(--white); 
+    box-shadow: var(--shadow); 
+    position: fixed; 
+    width: 100%;
+} 
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links{
+    display: flex;
+    list-style: none; 
+    gap: 30px;
+
+}
+
+.nav-links a{
+    text-decoration: none;  
+    font-weight: 500;
+    color: var(--text-color)
+}  
+
+.nav-links a:hover{
+    color: var(--primary-color);
+}
+
+/* Hero */
+
+.hero{
+    height: 100vh;
+    background:var(--gradient),url("https://cdn.pixabay.com/photo/2019/07/14/16/27/pen-4337521_1280.jpg");  
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: var(--white);  
+    padding-top: 70.409px;
+} 
+
+
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 20px; 
+    font-weight: 700;
+}
+
+.hero p{
+    font-size: 24px;
+    margin-bottom: 30px; 
+    opacity: 0.9;
+} 
+
+.btn{
+    background-color: var(--accent-color); 
+    color: var(--white); 
+    padding: 12px 30px;
+    text-decoration: none; 
+    border-radius: 20px;
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+} 
+
+.btn:hover{
+    background-color: var(--dark-accent-color);
 }

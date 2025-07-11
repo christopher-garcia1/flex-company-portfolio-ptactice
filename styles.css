@@ -3,11 +3,14 @@
 :root{
     --primary-color:#3298db;
     --secondary-color:#2ecc71; 
-    --accent-color: #e74c3c; 
+    --accent-color: #e74c3c;   
+    --dark-accent-color:#d0230f;
     --text-color:#34495e; 
     --bg-color:#ecf0f1; 
     --white:#ffffff; 
-    --shadow: 0 2px 10px rgba(0,0,0,0.15);
+    --shadow: 0 2px 10px rgba(0,0,0,0.15);  
+    --gradient: linear-gradient(135deg,rgba(50, 152, 219, 0.5),rgba(46, 204, 113, 0.7))
+
 }
 
 /* Remove defaults */
@@ -70,3 +73,45 @@ nav{
 }
 
 /* Hero */
+
+.hero{
+    height: 100vh;
+    background:var(--gradient),url("https://cdn.pixabay.com/photo/2019/07/14/16/27/pen-4337521_1280.jpg");  
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: var(--white);  
+    padding-top: 70.409px;
+} 
+
+
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 20px; 
+    font-weight: 700;
+}
+
+.hero p{
+    font-size: 24px;
+    margin-bottom: 30px; 
+    opacity: 0.9;
+} 
+
+.btn{
+    background-color: var(--accent-color); 
+    color: var(--white); 
+    padding: 12px 30px;
+    text-decoration: none; 
+    border-radius: 20px;
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+} 
+
+.btn:hover{
+    background-color: var(--dark-accent-color);
+}
